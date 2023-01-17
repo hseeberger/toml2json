@@ -1,5 +1,5 @@
 use anyhow::{Context, Result};
-use serde_json::Value as JsonValue;
+use serde_json::Value;
 use std::{
     fs,
     io::{stdin, BufRead},
@@ -21,7 +21,8 @@ fn main() -> Result<()> {
         Some(file) => read_from_file(file)?,
         None => read_from_stdin()?,
     };
-    let json = de::from_str::<JsonValue>(&toml).context("Cannot convert TOML to JSON")?;
+
+    let json = de::from_str::<Value>(&toml).context("Cannot convert TOML to JSON")?;
     println!("{json}");
 
     Ok(())

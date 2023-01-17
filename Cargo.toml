@@ -1,11 +1,17 @@
 [package]
-name = "toml2json"
-version = "0.1.0"
-edition = "2021"
+name          = "toml2json"
+version       = "0.1.0"
+edition       = "2021"
+authors       = [ "Heiko Seeberger <git@heikoseeberger.de>" ]
+license       = "Apache-2.0"
+readme        = "README.md"
+homepage      = "https://github.com/hseeberger/toml2json"
+repository    = "https://github.com/hseeberger/toml2json"
+documentation = "https://github.com/hseeberger/toml2json"
 
 [dependencies]
-anyhow = "1"
-serde = { version = "1", features = ["derive"]}
-serde_json = "1"
-structopt = "0"
-toml = "0"
+anyhow     = { version = "1.0" }
+serde      = { version = "1.0", features = [ "derive" ] }
+serde_json = { version = "1.0" }
+structopt  = { version = "0.3" }
+toml       = { version = "0.5" }
