@@ -1,5 +1,6 @@
 [package]
 name          = "toml2json"
+description   = "Converter from TOML to JSON."
 version       = "0.1.0"
 edition       = "2021"
 authors       = [ "Heiko Seeberger <git@heikoseeberger.de>" ]
@@ -8,10 +9,11 @@ readme        = "README.md"
 homepage      = "https://github.com/hseeberger/toml2json"
 repository    = "https://github.com/hseeberger/toml2json"
 documentation = "https://github.com/hseeberger/toml2json"
+publish       = false
 
 [dependencies]
 anyhow     = { version = "1.0" }
 serde      = { version = "1.0", features = [ "derive" ] }
 serde_json = { version = "1.0" }
 structopt  = { version = "0.3" }
-toml       = { version = "0.5" }
+toml       = { version = "0.8" }
